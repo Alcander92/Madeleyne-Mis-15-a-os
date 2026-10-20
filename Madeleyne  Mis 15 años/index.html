@@ -13,7 +13,12 @@
             box-sizing: border-box;
         }
         body {
-            background-color: #222;
+            /* Fondo oscuro elegante con un GIF de estrellas parpadeantes */
+            background-color: #0d0d0d;
+            background-image: url('https://media1.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: #333;
             font-family: 'Montserrat', sans-serif;
             display: flex;
@@ -21,17 +26,18 @@
             align-items: center;
             min-height: 100vh;
         }
-        /* Contenedor principal en formato celular con marco decorativo elegante */
+        /* Contenedor principal con efecto de cristal esmerilado y marco dorado */
         .mobile-container {
             width: 100%;
             max-width: 414px;
-            background-color: #fcfbfa;
+            background-color: rgba(252, 251, 250, 0.94);
+            backdrop-filter: blur(8px);
             min-height: 100vh;
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
             position: relative;
             overflow-x: hidden;
             text-align: center;
-            border: 2px solid #f3e5ab; /* Marco sutil dorado */
+            border: 2px solid #f3e5ab;
         }
 
         /* --- DECORACIÓN DE CORONAS Y BRILLOS EN LAS ESQUINAS --- */
@@ -42,7 +48,7 @@
             font-size: 1.2rem;
             top: 10px;
             z-index: 10;
-            opacity: 0.85;
+            opacity: 0.9;
         }
         .mobile-container::before {
             left: 15px;
@@ -51,7 +57,6 @@
             right: 15px;
         }
 
-        /* Decoración inferior para las esquinas de abajo */
         .bottom-crowns {
             position: absolute;
             bottom: 10px;
@@ -61,7 +66,7 @@
             justify-content: space-between;
             font-size: 1.2rem;
             pointer-events: none;
-            opacity: 0.85;
+            opacity: 0.9;
             z-index: 10;
         }
 
@@ -71,14 +76,14 @@
         }
         h1 {
             font-family: 'Great Vibes', cursive;
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             color: #d4af37;
             margin: 15px 0;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.4), 0 2px 4px rgba(0,0,0,0.1);
         }
         h2 {
             font-family: 'Great Vibes', cursive;
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             color: #b8860b;
             margin-bottom: 12px;
         }
@@ -99,12 +104,11 @@
             cursor: pointer;
             margin-top: 10px;
             transition: opacity 0.3s;
-            box-shadow: 0px 4px 10px rgba(212,175,55,0.3);
+            box-shadow: 0px 4px 12px rgba(212,175,55,0.4);
         }
         .music-btn:hover {
             opacity: 0.9;
         }
-        /* Frases y Secciones con toque de rosas */
         .quote {
             font-style: italic;
             color: #666;
@@ -112,9 +116,8 @@
             font-size: 1.1rem;
             position: relative;
         }
-        /* Decoración de rosas sutiles en los contenedores */
         .container-box {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
             padding: 25px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.04);
@@ -142,6 +145,7 @@
             border-top: 2px solid #f3e5ab;
             border-bottom: 2px solid #f3e5ab;
             padding: 12px 0;
+            background: rgba(255,255,255,0.5);
         }
         /* Cuenta regresiva */
         .countdown {
@@ -151,7 +155,7 @@
             margin-top: 15px;
         }
         .time-box {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.04);
@@ -187,7 +191,7 @@
         }
         /* Estilos del Formulario de Confirmación */
         .form-box {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.95);
             padding: 25px 20px;
             border-radius: 20px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.06);
@@ -264,7 +268,7 @@
         }
         /* Footer */
         footer {
-            background: #f9f6f0;
+            background: rgba(249, 246, 240, 0.9);
             padding: 30px 20px;
             color: #b8860b;
             position: relative;
@@ -284,7 +288,7 @@
         <section>
             <h1>Madeleyne</h1>
             <div style="margin: 20px 0; position: relative;">
-                <img src="foto.jpeg" alt="Madeleyne" style="width: 100%; max-width: 300px; border-radius: 15px; box-shadow: 0 4px 15px rgba(212,175,55,0.25); border: 2px solid #f3e5ab;">
+                <img src="foto.jpeg" alt="Madeleyne" style="width: 100%; max-width: 300px; border-radius: 15px; box-shadow: 0 4px 15px rgba(212,175,55,0.3); border: 2px solid #f3e5ab;">
             </div>
             <p>Presiona para escuchar mi canción 🎵</p>
             <button class="music-btn" onclick="togglePlay()">🎵 Reproducir Música</button>
@@ -321,7 +325,6 @@ Mis 15 años.” 💗 ✨🌹</p>
 
         <!-- MENSAJE SECUNDARIO -->
         <section>
-            <h2></h2>
             <p class="quote">“He aprendido que estar con quienes quiero es suficiente para ser feliz. Ten por seguro que el tiempo y estas letras se borrarán, pero el recuerdo de tu presencia esta tarde nunca lo olvidaré.” ✨🌹</p>
         </section>
 
