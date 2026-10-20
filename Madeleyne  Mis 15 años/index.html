@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis 15 Años - Invitación Especial</title>
+    <!-- Google Fonts para un estilo elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #222; /* Fondo oscuro alrededor para simular pantalla de celular en PC */
+            color: #333;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        /* Contenedor principal en formato celular */
+        .mobile-container {
+            width: 100%;
+            max-width: 414px;
+            background-color: #fcfbfa;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            position: relative;
+            overflow-x: hidden;
+            text-align: center;
+        }
+        section {
+            padding: 50px 20px;
+        }
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            color: #d4af37;
+            margin: 15px 0;
+        }
+        h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: #b8860b;
+            margin-bottom: 12px;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 12px;
+        }
+        /* Botón de Música */
+        .music-btn {
+            background: #d4af37;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+        .music-btn:hover {
+            background: #b8860b;
+        }
+        /* Frases y Secciones */
+        .quote {
+            font-style: italic;
+            color: #666;
+            margin: 15px 0;
+            font-size: 1.1rem;
+        }
+        .container-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin: 15px 0;
+        }
+        /* Fecha destacada */
+        .date-box {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: #b8860b;
+            border-top: 2px solid #f3e5ab;
+            border-bottom: 2px solid #f3e5ab;
+            padding: 12px 0;
+        }
+        /* Cuenta regresiva */
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 15px;
+        }
+        .time-box {
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .time-box span {
+            display: block;
+        }
+        .time-box .number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #d4af37;
+        }
+        .time-box .label {
+            font-size: 0.75rem;
+            color: #777;
+            text-transform: uppercase;
+        }
+        /* Botones de Mapas y WhatsApp */
+        .action-btn {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 12px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .action-btn:hover {
+            background: #d4af37;
+        }
+        /* Botón específico de WhatsApp */
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25d366;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 15px;
+            box-shadow: 0px 4px 12px rgba(37, 211, 102, 0.3);
+            transition: background 0.3s;
+        }
+        .whatsapp-btn:hover {
+            background: #1ebe5d;
+        }
+        /* Footer */
+        footer {
+            background: #f9f6f0;
+            padding: 30px 20px;
+            color: #b8860b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mobile-container">
+
+        <!-- SECCIÓN PORTADA Y MÚSICA -->
+        <section>
+            <h1>[Madeleyne]</h1>
+            <div style="margin: 20px 0;">
+            <img src="foto.jpeg" alt="Naomy" style="width: 100%; max-width: 300px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"></div>
+            <p>Presiona para escuchar mi canción</p>
+            <button class="music-btn" onclick="togglePlay()">🎵 Reproducir Música</button>
+            
+            <!-- Reemplaza "cancion.mp3" por el archivo de audio descargado -->
+            <audio id="background-music" loop>
+                <source src="musica.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio.
+            </audio>
+        </section>
+
+        <!-- MENSAJE INICIAL -->
+        <section>
+            <h2>Mis 15 Años</h2>
+            <p class="quote">“Porque esta noche es muy importante para mí, quiero compartirlo con las personas que llevo en el corazón porque eres una de ellas. Quisiera que estés presente en una de las noches más inolvidables y espléndidas de mi vida. Mis 15 años.”</p>
+        </section>
+
+        <!-- PADRES Y PADRINOS -->
+        <section>
+            <div class="container-box">
+                <h2>Con el amor de mis Padres</h2>
+                <p><strong>Jhonny Javier Silva Cabezas</strong></p>
+                <p>&amp;</p>
+                <p><strong>Carmen Maribel Castillo Luna</strong></p>
+            </div>
+
+            <div class="container-box">
+                <h2>&amp; Madrina</h2>
+                <p><strong></strong></p>
+                <p><strong>Johanna Natividad Pinto Rojas</strong></p>
+            </div>
+        </section>
+
+        <!-- FECHA -->
+        <section>
+            <h2>Mis Quince</h2>
+            <p>Octubre</p>
+            <div class="date-box">
+                <span>Sábado</span>
+                <span>31</span>
+                <span>2026</span>
+            </div>
+        </section>
+
+
+        <!-- RECEPCIÓN -->
+        <section>
+            <div class="container-box">
+                <h2>Recepción</h2>
+                <p>Sábado 31 de octubre<br>Hora: 03:00 p.m.</p>
+                <p>Salón de Eventos ARIUX EVENTOS</p>
+                <p>Cantón Montalvo, Los Ríos</p>
+                <a class="action-btn" href="https://www.google.com/maps/dir//6P89%2B72P+Sal%C3%B3n+de+eventos+Ariux,+Montalvo/@-1.784017,-79.2836317,17z/data=!4m16!1m7!3m6!1s0x91d329005af755a7:0xb07b6ee3ad7a66b4!2sSal%C3%B3n+de+eventos+Ariux!8m2!3d-1.7852824!4d-79.2822691!16s%2Fg%2F11zxkprtnk!4m7!1m0!1m5!1m1!1s0x91d329005af755a7:0xb07b6ee3ad7a66b4!2m2!1d-79.2822691!2d-1.7852824?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D">Ver mapa</a>
+            </div>
+        </section>
+
+        <!-- CUENTA REGRESIVA -->
+        <section>
+            <h2>Solo faltan</h2>
+            <div class="countdown">
+                <div class="time-box">
+                    <span class="number" id="days">12</span>
+                    <span class="label">Días</span>
+                </div>
+                <div class="time-box">
+                    <span class="number" id="hours">10</span>
+                    <span class="label">Horas</span>
+                </div>
+                <div class="time-box">
+                    <span class="number" id="minutes">59</span>
+                    <span class="label">Minutos</span>
+                </div>
+                <div class="time-box">
+                    <span class="number" id="seconds">44</span>
+                    <span class="label">Segundos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- DRESS CODE Y REGALOS -->
+        <section>
+            <h2>Dress Code</h2>
+            <p><strong>Semi - Formal</strong></p>
+            <p class="quote"><em>Reservado el color rosado para la Quinceañera.</em></p>
+            
+            <br>
+            <h2>Muestra de Cariño</h2>
+            <p>El mejor regalo que me puedes dar es tu presencia, pero si deseas darme un obsequio puedes hacerlo en <strong>sobre cerrado</strong>.</p>
+        </section>
+
+        <!-- CONFIRMAR ASISTENCIA WHATSAPP -->
+        <section>
+            <h2>Confirmar Asistencia</h2>
+            <p>Por favor, haz clic abajo para confirmar tu presencia por WhatsApp.</p>
+            <!-- Cambia el número 593900000000 por tu número de celular con el código de país (ej: 593 para Ecuador) -->
+            <a class="whatsapp-btn" href="https://wa.me/593980573678?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20los%2015%20años.%20¡Allá%20estaré!" target="_blank">
+                💬 Confirmar por WhatsApp
+            </a>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <h2>¡Te espero!</h2>
+            <p>Madeleyne Mis 15 Años</p>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPT DE MÚSICA Y CUENTA REGRESIVA -->
+    <script>
+        var music = document.getElementById("background-music");
+        var isPlaying = false;
+        function togglePlay() {
+            if (isPlaying) {
+                music.pause();
+                isPlaying = false;
+                document.querySelector('.music-btn').innerText = "🎵 Reproducir Música";
+            } else {
+                music.play();
+                isPlaying = true;
+                document.querySelector('.music-btn').innerText = "⏸️ Pausar Música";
+            }
+        }
+
+        // Cuenta regresiva (Configurada para el 26 de Octubre de 2026)
+        const countdownDate = new Date("Oct 31, 2026 15:00:00").getTime();
+        setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+        }, 1000);
+    </script>
+</body>
+</html>
