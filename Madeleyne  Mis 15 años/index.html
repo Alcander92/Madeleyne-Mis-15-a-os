@@ -122,7 +122,7 @@
             color: #777;
             text-transform: uppercase;
         }
-        /* Botones de Mapas y WhatsApp */
+        /* Botones de Mapas */
         .action-btn {
             display: inline-block;
             background: #333;
@@ -137,19 +137,67 @@
         .action-btn:hover {
             background: #d4af37;
         }
+        /* Estilos del Formulario de Confirmación */
+        .form-box {
+            background: #fff;
+            padding: 25px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin: 15px 0;
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #d4af37;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: 'Montserrat', sans-serif;
+            outline: none;
+            color: #333;
+            background-color: #fff;
+        }
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 8px;
+        }
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            color: #555;
+            cursor: pointer;
+        }
         /* Botón específico de WhatsApp */
         .whatsapp-btn {
-            display: inline-block;
+            display: block;
+            width: 100%;
             background: #25d366;
             color: #fff;
-            padding: 12px 25px;
+            padding: 14px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1rem;
-            margin-top: 15px;
+            text-align: center;
+            margin-top: 20px;
             box-shadow: 0px 4px 12px rgba(37, 211, 102, 0.3);
             transition: background 0.3s;
+            border: none;
+            cursor: pointer;
         }
         .whatsapp-btn:hover {
             background: #1ebe5d;
@@ -170,11 +218,12 @@
         <section>
             <h1>Madeleyne</h1>
             <div style="margin: 20px 0;">
-            <img src="foto.jpeg" alt="Naomy" style="width: 100%; max-width: 300px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"></div>
+                <img src="foto.jpeg" alt="Madeleyne" style="width: 100%; max-width: 300px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            </div>
             <p>Presiona para escuchar mi canción</p>
             <button class="music-btn" onclick="togglePlay()">🎵 Reproducir Música</button>
             
-            <!-- Reemplaza "cancion.mp3" por el archivo de audio descargado -->
+            <!-- Archivo de audio -->
             <audio id="background-music" loop>
                 <source src="musica.mp3" type="audio/mpeg">
                 Tu navegador no soporta audio.
@@ -197,8 +246,7 @@
             </div>
 
             <div class="container-box">
-                <h2>&amp; Madrina</h2>
-                <p><strong></strong></p>
+                <h2>&amp; Padrino / Madrina</h2>
                 <p><strong>Johanna Natividad Pinto Rojas</strong></p>
             </div>
         </section>
@@ -214,7 +262,6 @@
             </div>
         </section>
 
-
         <!-- RECEPCIÓN -->
         <section>
             <div class="container-box">
@@ -222,7 +269,7 @@
                 <p>Sábado 31 de octubre<br>Hora: 03:00 p.m.</p>
                 <p>Salón de Eventos ARIUX EVENTOS</p>
                 <p>Cantón Montalvo, Los Ríos</p>
-                <a class="action-btn" href="https://www.google.com/maps/dir//6P89%2B72P+Sal%C3%B3n+de+eventos+Ariux,+Montalvo/@-1.784017,-79.2836317,17z/data=!4m16!1m7!3m6!1s0x91d329005af755a7:0xb07b6ee3ad7a66b4!2sSal%C3%B3n+de+eventos+Ariux!8m2!3d-1.7852824!4d-79.2822691!16s%2Fg%2F11zxkprtnk!4m7!1m0!1m5!1m1!1s0x91d329005af755a7:0xb07b6ee3ad7a66b4!2m2!1d-79.2822691!2d-1.7852824?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D">Ver mapa</a>
+                <a class="action-btn" href="https://www.google.com/maps/dir//6P89%2B72P+Sal%C3%B3n+de+eventos+Ariux,+Montalvo/@-1.784017,-79.2836317,17z/data=!4m16!1m7!3m6!1s0x91d329005af755a7:0xb07b6ee3ad7a66b4!2sSal%C3%B3n+de+eventos+Ariux!8m2!3d-1.7852824!4d-79.2822691!16s%2Fg%2F11zxkprtnk!4m7!1m0!1m5!1m1!1s0x91d329005af755a7:0xb07b6ee3ad7a66b4!2m2!1d-79.2822691!2d-1.7852824?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver mapa</a>
             </div>
         </section>
 
@@ -231,19 +278,19 @@
             <h2>Solo faltan</h2>
             <div class="countdown">
                 <div class="time-box">
-                    <span class="number" id="days">12</span>
+                    <span class="number" id="days">00</span>
                     <span class="label">Días</span>
                 </div>
                 <div class="time-box">
-                    <span class="number" id="hours">10</span>
+                    <span class="number" id="hours">00</span>
                     <span class="label">Horas</span>
                 </div>
                 <div class="time-box">
-                    <span class="number" id="minutes">59</span>
+                    <span class="number" id="minutes">00</span>
                     <span class="label">Minutos</span>
                 </div>
                 <div class="time-box">
-                    <span class="number" id="seconds">44</span>
+                    <span class="number" id="seconds">00</span>
                     <span class="label">Segundos</span>
                 </div>
             </div>
@@ -260,25 +307,54 @@
             <p>El mejor regalo que me puedes dar es tu presencia, pero si deseas darme un obsequio puedes hacerlo en <strong>sobre cerrado</strong>.</p>
         </section>
 
-        <!-- CONFIRMAR ASISTENCIA WHATSAPP -->
+        <!-- CONFIRMAR ASISTENCIA WHATSAPP (CON MENÚ INTERACTIVO) -->
         <section>
             <h2>Confirmar Asistencia</h2>
-            <p>Por favor, haz clic abajo para confirmar tu presencia por WhatsApp.</p>
-            <!-- Cambia el número 593900000000 por tu número de celular con el código de país (ej: 593 para Ecuador) -->
-            <a class="whatsapp-btn" href="https://wa.me/593980573678?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20los%2015%20años.%20¡Allá%20estaré!" target="_blank">
-                💬 Confirmar por WhatsApp
-            </a>
+            <p>Por favor confirma tu presencia con anticipación</p>
+            
+            <div class="form-box">
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" id="guestName" class="form-control" placeholder="Tu Nombre y Apellido">
+                </div>
+
+                <div class="form-group">
+                    <label>Cantidad de Pases</label>
+                    <select id="guestPasses" class="form-control">
+                        <option value="1 Pase">1 Pase</option>
+                        <option value="2 Pases" selected>2 Pases</option>
+                        <option value="3 Pases">3 Pases</option>
+                        <option value="4 Pases">4 Pases</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>¿Nos acompañarás?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="attendance" value="Sí, asistiré" checked> Sí, asistiré
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="attendance" value="Lo siento, no podré"> Lo siento, no podré
+                        </label>
+                    </div>
+                </div>
+
+                <button class="whatsapp-btn" onclick="sendWhatsApp()">
+                    💬 Confirmar por WhatsApp
+                </button>
+            </div>
         </section>
 
         <!-- FOOTER -->
         <footer>
             <h2>¡Te espero!</h2>
-            <p>Madeleyne Mis 15 Años</p>
+            <p>Madeleyne • Mis 15 Años</p>
         </footer>
 
     </div>
 
-    <!-- SCRIPT DE MÚSICA Y CUENTA REGRESIVA -->
+    <!-- SCRIPT DE MÚSICA, CUENTA REGRESIVA Y FORMULARIO WHATSAPP -->
     <script>
         var music = document.getElementById("background-music");
         var isPlaying = false;
@@ -294,7 +370,7 @@
             }
         }
 
-        // Cuenta regresiva (Configurada para el 26 de Octubre de 2026)
+        // Cuenta regresiva (Configurada para el 31 de Octubre de 2026)
         const countdownDate = new Date("Oct 31, 2026 15:00:00").getTime();
         setInterval(function() {
             const now = new Date().getTime();
@@ -305,6 +381,27 @@
             document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
         }, 1000);
+
+        // Función que arma el mensaje detallado para WhatsApp
+        function sendWhatsApp() {
+            const name = document.getElementById("guestName").value.trim();
+            const passes = document.getElementById("guestPasses").value;
+            const attendance = document.querySelector('input[name="attendance"]:checked').value;
+
+            if (name === "") {
+                alert("Por favor, ingresa tu Nombre y Apellido.");
+                document.getElementById("guestName").focus();
+                return;
+            }
+
+            // Tu número configurado con código de país (Ecuador: 593)
+            const phoneNumber = "593980573678"; 
+            
+            const message = `¡Hola! Mi nombre es *${name}*.\n\nConfirmo mi asistencia a los 15 años de Madeleyne:\n- Estado: *${attendance}*\n- Cantidad de Pases: *${passes}*`;
+            
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+        }
     </script>
 </body>
 </html>
