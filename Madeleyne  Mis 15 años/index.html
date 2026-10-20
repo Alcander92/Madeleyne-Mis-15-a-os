@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis 15 Años - Invitación Especial</title>
+    <title>Mis 15 Años - Madeleyne</title>
     <!-- Google Fonts para un estilo elegante -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -13,7 +13,7 @@
             box-sizing: border-box;
         }
         body {
-            background-color: #222; /* Fondo oscuro alrededor para simular pantalla de celular en PC */
+            background-color: #222;
             color: #333;
             font-family: 'Montserrat', sans-serif;
             display: flex;
@@ -21,25 +21,60 @@
             align-items: center;
             min-height: 100vh;
         }
-        /* Contenedor principal en formato celular */
+        /* Contenedor principal en formato celular con marco decorativo elegante */
         .mobile-container {
             width: 100%;
             max-width: 414px;
             background-color: #fcfbfa;
             min-height: 100vh;
-            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
             position: relative;
             overflow-x: hidden;
             text-align: center;
+            border: 2px solid #f3e5ab; /* Marco sutil dorado */
         }
+
+        /* --- DECORACIÓN DE CORONAS Y BRILLOS EN LAS ESQUINAS --- */
+        .mobile-container::before,
+        .mobile-container::after {
+            content: "👑 ✨";
+            position: absolute;
+            font-size: 1.2rem;
+            top: 10px;
+            z-index: 10;
+            opacity: 0.85;
+        }
+        .mobile-container::before {
+            left: 15px;
+        }
+        .mobile-container::after {
+            right: 15px;
+        }
+
+        /* Decoración inferior para las esquinas de abajo */
+        .bottom-crowns {
+            position: absolute;
+            bottom: 10px;
+            left: 15px;
+            right: 15px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            pointer-events: none;
+            opacity: 0.85;
+            z-index: 10;
+        }
+
         section {
-            padding: 50px 20px;
+            padding: 45px 20px;
+            position: relative;
         }
         h1 {
             font-family: 'Great Vibes', cursive;
             font-size: 3.5rem;
             color: #d4af37;
             margin: 15px 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         h2 {
             font-family: 'Great Vibes', cursive;
@@ -55,7 +90,7 @@
         }
         /* Botón de Música */
         .music-btn {
-            background: #d4af37;
+            background: linear-gradient(135deg, #d4af37, #b8860b);
             color: white;
             border: none;
             padding: 10px 22px;
@@ -63,26 +98,38 @@
             font-size: 0.95rem;
             cursor: pointer;
             margin-top: 10px;
-            transition: background 0.3s;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            transition: opacity 0.3s;
+            box-shadow: 0px 4px 10px rgba(212,175,55,0.3);
         }
         .music-btn:hover {
-            background: #b8860b;
+            opacity: 0.9;
         }
-        /* Frases y Secciones */
+        /* Frases y Secciones con toque de rosas */
         .quote {
             font-style: italic;
             color: #666;
             margin: 15px 0;
             font-size: 1.1rem;
+            position: relative;
         }
+        /* Decoración de rosas sutiles en los contenedores */
         .container-box {
             background: #fff;
             padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
             margin: 15px 0;
+            border: 1px solid #f9f0d9;
+            position: relative;
         }
+        .container-box::before {
+            content: "🌹";
+            position: absolute;
+            top: -10px;
+            right: 15px;
+            font-size: 1rem;
+        }
+
         /* Fecha destacada */
         .date-box {
             display: flex;
@@ -107,7 +154,8 @@
             background: #fff;
             padding: 10px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+            border: 1px solid #f9f0d9;
         }
         .time-box span {
             display: block;
@@ -142,9 +190,21 @@
             background: #fff;
             padding: 25px 20px;
             border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
             margin: 15px 0;
             text-align: left;
+            border: 1px solid #f9f0d9;
+            position: relative;
+        }
+        .form-box::before {
+            content: "✨ 🌹 ✨";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.85rem;
+            background: #fcfbfa;
+            padding: 0 10px;
         }
         .form-group {
             margin-bottom: 18px;
@@ -207,20 +267,26 @@
             background: #f9f6f0;
             padding: 30px 20px;
             color: #b8860b;
+            position: relative;
         }
     </style>
 </head>
 <body>
 
     <div class="mobile-container">
+        <!-- Adornos de coronas y brillos en las esquinas inferiores -->
+        <div class="bottom-crowns">
+            <span>👑 ✨</span>
+            <span>✨ 👑</span>
+        </div>
 
         <!-- SECCIÓN PORTADA Y MÚSICA -->
         <section>
             <h1>Madeleyne</h1>
-            <div style="margin: 20px 0;">
-                <img src="foto.jpeg" alt="Madeleyne" style="width: 100%; max-width: 300px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <div style="margin: 20px 0; position: relative;">
+                <img src="foto.jpeg" alt="Madeleyne" style="width: 100%; max-width: 300px; border-radius: 15px; box-shadow: 0 4px 15px rgba(212,175,55,0.25); border: 2px solid #f3e5ab;">
             </div>
-            <p>Presiona para escuchar mi canción</p>
+            <p>Presiona para escuchar mi canción 🎵</p>
             <button class="music-btn" onclick="togglePlay()">🎵 Reproducir Música</button>
             
             <!-- Archivo de audio -->
@@ -233,7 +299,7 @@
         <!-- MENSAJE INICIAL -->
         <section>
             <h2>Mis 15 Años</h2>
-            <p class="quote">“Porque esta noche es muy importante para mí, quiero compartirlo con las personas que llevo en el corazón porque eres una de ellas. Quisiera que estés presente en una de las noches más inolvidables y espléndidas de mi vida. Mis 15 años.”</p>
+            <p class="quote">“Porque esta noche es muy importante para mí, quiero compartirlo con las personas que llevo en el corazón porque eres una de ellas. Quisiera que estés presente en una de las noches más inolvidables y espléndidas de mi vida. Mis 15 años.” ✨🌹</p>
         </section>
 
         <!-- PADRES Y PADRINOS -->
@@ -246,7 +312,7 @@
             </div>
 
             <div class="container-box">
-                <h2>&amp; Padrino / Madrina</h2>
+                <h2>&amp; Madrina</h2>
                 <p><strong>Johanna Natividad Pinto Rojas</strong></p>
             </div>
         </section>
@@ -300,11 +366,11 @@
         <section>
             <h2>Dress Code</h2>
             <p><strong>Semi - Formal</strong></p>
-            <p class="quote"><em>Reservado el color rosado para la Quinceañera.</em></p>
+            <p class="quote"><em>Reservado el color rosado para la Quinceañera.</em> 👑</p>
             
             <br>
             <h2>Muestra de Cariño</h2>
-            <p>El mejor regalo que me puedes dar es tu presencia, pero si deseas darme un obsequio puedes hacerlo en <strong>sobre cerrado</strong>.</p>
+            <p>El mejor regalo que me puedes dar es tu presencia, pero si deseas darme un obsequio puedes hacerlo en <strong>sobre cerrado</strong>. 💌</p>
         </section>
 
         <!-- CONFIRMAR ASISTENCIA WHATSAPP (CON MENÚ INTERACTIVO) -->
@@ -332,7 +398,7 @@
                     <label>¿Nos acompañarás?</label>
                     <div class="radio-group">
                         <label class="radio-option">
-                            <input type="radio" name="attendance" value="Sí, asistiré" checked> Sí, asistiré
+                            <input type="radio" name="attendance" value="Sí, asistiré" checked> Sí, asistiré 🌹
                         </label>
                         <label class="radio-option">
                             <input type="radio" name="attendance" value="Lo siento, no podré"> Lo siento, no podré
@@ -348,7 +414,7 @@
 
         <!-- FOOTER -->
         <footer>
-            <h2>¡Te espero!</h2>
+            <h2>✨ ¡Te espero! ✨</h2>
             <p>Madeleyne • Mis 15 Años</p>
         </footer>
 
@@ -394,10 +460,9 @@
                 return;
             }
 
-            // Tu número configurado con código de país (Ecuador: 593)
             const phoneNumber = "593980573678"; 
             
-            const message = `¡Hola! Mi nombre es *${name}*.\n\nConfirmo mi asistencia a los 15 años de Madeleyne:\n- Estado: *${attendance}*\n- Cantidad de Pases: *${passes}*`;
+            const message = `👑 *CONFIRMACIÓN DE ASISTENCIA* 👑\n\n¡Hola! Mi nombre es *${name}*.\n\nConfirmo mi asistencia a los 15 años de Madeleyne:\n- Estado: *${attendance}*\n- Cantidad de Pases: *${passes}*`;
             
             const encodedMessage = encodeURIComponent(message);
             window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
