@@ -21,53 +21,53 @@
             align-items: center;
             min-height: 100vh;
         }
-        /* Contenedor principal en formato celular con diseño elegante */
+        /* Contenedor principal en formato celular con marco decorativo elegante */
         .mobile-container {
             width: 100%;
             max-width: 414px;
             background-color: #fcfbfa;
             min-height: 100vh;
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
             position: relative;
             overflow-x: hidden;
             text-align: center;
-            border: 2px solid #f3e5ab;
+            border: 2px solid #f3e5ab; /* Marco sutil dorado */
         }
 
-        /* Decoración de esquinas con imágenes elegantes */
-        .corner-decoration {
+        /* --- DECORACIÓN DE CORONAS Y BRILLOS EN LAS ESQUINAS --- */
+        .mobile-container::before,
+        .mobile-container::after {
+            content: "👑 ✨";
             position: absolute;
-            width: 70px;
-            height: 70px;
-            pointer-events: none;
+            font-size: 1.2rem;
+            top: 10px;
             z-index: 10;
             opacity: 0.85;
         }
-        .top-left {
-            top: 5px;
-            left: 5px;
-            transform: rotate(0deg);
+        .mobile-container::before {
+            left: 15px;
         }
-        .top-right {
-            top: 5px;
-            right: 5px;
-            transform: scaleX(-1); /* Espejo para la esquina derecha */
+        .mobile-container::after {
+            right: 15px;
         }
-        .bottom-left {
-            bottom: 5px;
-            left: 5px;
-            transform: scaleY(-1);
-        }
-        .bottom-right {
-            bottom: 5px;
-            right: 5px;
-            transform: scale(-1, -1);
+
+        /* Decoración inferior para las esquinas de abajo */
+        .bottom-crowns {
+            position: absolute;
+            bottom: 10px;
+            left: 15px;
+            right: 15px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            pointer-events: none;
+            opacity: 0.85;
+            z-index: 10;
         }
 
         section {
             padding: 45px 20px;
             position: relative;
-            z-index: 2;
         }
         h1 {
             font-family: 'Great Vibes', cursive;
@@ -104,12 +104,15 @@
         .music-btn:hover {
             opacity: 0.9;
         }
+        /* Frases y Secciones con toque de rosas */
         .quote {
             font-style: italic;
             color: #666;
             margin: 15px 0;
             font-size: 1.1rem;
+            position: relative;
         }
+        /* Decoración de rosas sutiles en los contenedores */
         .container-box {
             background: #fff;
             padding: 25px;
@@ -117,7 +120,17 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.04);
             margin: 15px 0;
             border: 1px solid #f9f0d9;
+            position: relative;
         }
+        .container-box::before {
+            content: "🌹";
+            position: absolute;
+            top: -10px;
+            right: 15px;
+            font-size: 1rem;
+        }
+
+        /* Fecha destacada */
         .date-box {
             display: flex;
             justify-content: center;
@@ -130,6 +143,7 @@
             border-bottom: 2px solid #f3e5ab;
             padding: 12px 0;
         }
+        /* Cuenta regresiva */
         .countdown {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -156,6 +170,7 @@
             color: #777;
             text-transform: uppercase;
         }
+        /* Botones de Mapas */
         .action-btn {
             display: inline-block;
             background: #333;
@@ -170,7 +185,7 @@
         .action-btn:hover {
             background: #d4af37;
         }
-        /* Formulario de Confirmación */
+        /* Estilos del Formulario de Confirmación */
         .form-box {
             background: #fff;
             padding: 25px 20px;
@@ -179,6 +194,17 @@
             margin: 15px 0;
             text-align: left;
             border: 1px solid #f9f0d9;
+            position: relative;
+        }
+        .form-box::before {
+            content: "✨ 🌹 ✨";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.85rem;
+            background: #fcfbfa;
+            padding: 0 10px;
         }
         .form-group {
             margin-bottom: 18px;
@@ -215,6 +241,7 @@
             color: #555;
             cursor: pointer;
         }
+        /* Botón específico de WhatsApp */
         .whatsapp-btn {
             display: block;
             width: 100%;
@@ -235,32 +262,34 @@
         .whatsapp-btn:hover {
             background: #1ebe5d;
         }
+        /* Footer */
         footer {
             background: #f9f6f0;
             padding: 30px 20px;
             color: #b8860b;
+            position: relative;
         }
     </style>
 </head>
 <body>
 
     <div class="mobile-container">
-
-        <!-- Imágenes decorativas de esquinas (Coronas / Rosas doradas elegantes) -->
-        <img src="https://es.pngtree.com/freepng/silver-tiara-with-blue-gems_20975600.html?share=3&utm_source=Pinterest&utm_medium=organic" class="corner-decoration top-left" alt="Decoración">
-        <img src="https://es.pngtree.com/freepng/silver-tiara-with-blue-gems_20975600.html?share=3&utm_source=Pinterest&utm_medium=organic" class="corner-decoration top-right" alt="Decoración">
-        <img src="https://pin.it/2wR62aCbu" class="corner-decoration bottom-left" alt="Decoración">
-        <img src="https://pin.it/2wR62aCbu" class="corner-decoration bottom-right" alt="Decoración">
+        <!-- Adornos de coronas y brillos en las esquinas inferiores -->
+        <div class="bottom-crowns">
+            <span>👑 ✨</span>
+            <span>✨ 👑</span>
+        </div>
 
         <!-- SECCIÓN PORTADA Y MÚSICA -->
         <section>
             <h1>Madeleyne</h1>
-            <div style="margin: 20px 0;">
+            <div style="margin: 20px 0; position: relative;">
                 <img src="foto.jpeg" alt="Madeleyne" style="width: 100%; max-width: 300px; border-radius: 15px; box-shadow: 0 4px 15px rgba(212,175,55,0.25); border: 2px solid #f3e5ab;">
             </div>
-            <p>Presiona para escuchar mi canción</p>
+            <p>Presiona para escuchar mi canción 🎵</p>
             <button class="music-btn" onclick="togglePlay()">🎵 Reproducir Música</button>
             
+            <!-- Archivo de audio -->
             <audio id="background-music" loop>
                 <source src="musica.mp3" type="audio/mpeg">
                 Tu navegador no soporta audio.
@@ -270,7 +299,7 @@
         <!-- MENSAJE INICIAL -->
         <section>
             <h2>Mis 15 Años</h2>
-            <p class="quote">“Porque esta noche es muy importante para mí, quiero compartirlo con las personas que llevo en el corazón porque eres una de ellas. Quisiera que estés presente en una de las noches más inolvidables y espléndidas de mi vida. Mis 15 años.”</p>
+            <p class="quote">“Porque esta tarde es muy importante para mí, quiero compartirlo con las personas que llevo en el corazón porque eres una de ellas. Quisiera que estés presente en una de las noches más inolvidables y espléndidas de mi vida. Mis 15 años.” ✨🌹</p>
         </section>
 
         <!-- PADRES Y PADRINOS -->
@@ -337,14 +366,14 @@
         <section>
             <h2>Dress Code</h2>
             <p><strong>Semi - Formal</strong></p>
-            <p class="quote"><em>Reservado el color rosado para la Quinceañera.</em></p>
+            <p class="quote"><em>Reservado el color rosado para la Quinceañera.</em> 👑</p>
             
             <br>
             <h2>Muestra de Cariño</h2>
-            <p>El mejor regalo que me puedes dar es tu presencia, pero si deseas darme un obsequio puedes hacerlo en <strong>sobre cerrado</strong>.</p>
+            <p>El mejor regalo que me puedes dar es tu presencia, pero si deseas darme un obsequio puedes hacerlo en <strong>sobre cerrado</strong>. 💌</p>
         </section>
 
-        <!-- CONFIRMAR ASISTENCIA WHATSAPP -->
+        <!-- CONFIRMAR ASISTENCIA WHATSAPP (CON MENÚ INTERACTIVO) -->
         <section>
             <h2>Confirmar Asistencia</h2>
             <p>Por favor confirma tu presencia con anticipación</p>
@@ -369,7 +398,7 @@
                     <label>¿Nos acompañarás?</label>
                     <div class="radio-group">
                         <label class="radio-option">
-                            <input type="radio" name="attendance" value="Sí, asistiré" checked> Sí, asistiré
+                            <input type="radio" name="attendance" value="Sí, asistiré" checked> Sí, asistiré 🌹
                         </label>
                         <label class="radio-option">
                             <input type="radio" name="attendance" value="Lo siento, no podré"> Lo siento, no podré
@@ -385,13 +414,13 @@
 
         <!-- FOOTER -->
         <footer>
-            <h2>¡Te espero!</h2>
+            <h2>✨ ¡Te espero! ✨</h2>
             <p>Madeleyne • Mis 15 Años</p>
         </footer>
 
     </div>
 
-    <!-- SCRIPTS -->
+    <!-- SCRIPT DE MÚSICA, CUENTA REGRESIVA Y FORMULARIO WHATSAPP -->
     <script>
         var music = document.getElementById("background-music");
         var isPlaying = false;
@@ -407,6 +436,7 @@
             }
         }
 
+        // Cuenta regresiva (Configurada para el 31 de Octubre de 2026)
         const countdownDate = new Date("Oct 31, 2026 15:00:00").getTime();
         setInterval(function() {
             const now = new Date().getTime();
@@ -418,6 +448,7 @@
             document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
         }, 1000);
 
+        // Función que arma el mensaje detallado para WhatsApp
         function sendWhatsApp() {
             const name = document.getElementById("guestName").value.trim();
             const passes = document.getElementById("guestPasses").value;
