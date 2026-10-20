@@ -1,483 +1,959 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mis 15 Años - Madeleyne</title>
+
     <!-- Google Fonts para un estilo elegante -->
+
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
+
         * {
+
             margin: 0;
+
             padding: 0;
+
             box-sizing: border-box;
+
         }
+
         body {
-            /* Fondo oscuro elegante con un GIF de estrellas parpadeantes */
-            background-color: #0d0d0d;
-            background-image: url('https://media1.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+
+            background-color: #222;
+
             color: #333;
+
             font-family: 'Montserrat', sans-serif;
+
             display: flex;
+
             justify-content: center;
+
             align-items: center;
+
             min-height: 100vh;
+
         }
-        /* Contenedor principal con efecto de cristal esmerilado y marco dorado */
+
+        /* Contenedor principal en formato celular con marco decorativo elegante */
+
         .mobile-container {
+
             width: 100%;
+
             max-width: 414px;
-            background-color: rgba(252, 251, 250, 0.94);
-            backdrop-filter: blur(8px);
+
+            background-color: #fcfbfa;
+
             min-height: 100vh;
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+
             position: relative;
+
             overflow-x: hidden;
+
             text-align: center;
-            border: 2px solid #f3e5ab;
+
+            border: 2px solid #f3e5ab; /* Marco sutil dorado */
+
         }
+
+
 
         /* --- DECORACIÓN DE CORONAS Y BRILLOS EN LAS ESQUINAS --- */
+
         .mobile-container::before,
+
         .mobile-container::after {
+
             content: "👑 ✨";
+
             position: absolute;
+
             font-size: 1.2rem;
+
             top: 10px;
+
             z-index: 10;
-            opacity: 0.9;
+
+            opacity: 0.85;
+
         }
+
         .mobile-container::before {
+
             left: 15px;
+
         }
+
         .mobile-container::after {
+
             right: 15px;
+
         }
+
+
+
+        /* Decoración inferior para las esquinas de abajo */
 
         .bottom-crowns {
+
             position: absolute;
+
             bottom: 10px;
+
             left: 15px;
+
             right: 15px;
+
             display: flex;
+
             justify-content: space-between;
+
             font-size: 1.2rem;
+
             pointer-events: none;
-            opacity: 0.9;
+
+            opacity: 0.85;
+
             z-index: 10;
+
         }
+
+
 
         section {
+
             padding: 45px 20px;
+
             position: relative;
+
         }
+
         h1 {
+
             font-family: 'Great Vibes', cursive;
-            font-size: 3.8rem;
+
+            font-size: 3.5rem;
+
             color: #d4af37;
+
             margin: 15px 0;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.4), 0 2px 4px rgba(0,0,0,0.1);
+
+            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+
         }
+
         h2 {
+
             font-family: 'Great Vibes', cursive;
-            font-size: 2.6rem;
+
+            font-size: 2.5rem;
+
             color: #b8860b;
+
             margin-bottom: 12px;
+
         }
+
         p {
+
             font-size: 1rem;
+
             line-height: 1.5;
+
             color: #555;
+
             margin-bottom: 12px;
+
         }
+
         /* Botón de Música */
+
         .music-btn {
+
             background: linear-gradient(135deg, #d4af37, #b8860b);
+
             color: white;
+
             border: none;
+
             padding: 10px 22px;
+
             border-radius: 25px;
+
             font-size: 0.95rem;
+
             cursor: pointer;
+
             margin-top: 10px;
+
             transition: opacity 0.3s;
-            box-shadow: 0px 4px 12px rgba(212,175,55,0.4);
+
+            box-shadow: 0px 4px 10px rgba(212,175,55,0.3);
+
         }
+
         .music-btn:hover {
+
             opacity: 0.9;
+
         }
+
+        /* Frases y Secciones con toque de rosas */
+
         .quote {
+
             font-style: italic;
+
             color: #666;
+
             margin: 15px 0;
+
             font-size: 1.1rem;
+
             position: relative;
+
         }
+
+        /* Decoración de rosas sutiles en los contenedores */
+
         .container-box {
-            background: rgba(255, 255, 255, 0.9);
+
+            background: #fff;
+
             padding: 25px;
+
             border-radius: 15px;
+
             box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+
             margin: 15px 0;
+
             border: 1px solid #f9f0d9;
+
             position: relative;
+
         }
+
         .container-box::before {
+
             content: "🌹";
+
             position: absolute;
+
             top: -10px;
+
             right: 15px;
+
             font-size: 1rem;
+
         }
+
+
 
         /* Fecha destacada */
+
         .date-box {
+
             display: flex;
+
             justify-content: center;
+
             gap: 15px;
+
             margin: 20px 0;
+
             font-weight: 600;
+
             font-size: 1.3rem;
+
             color: #b8860b;
+
             border-top: 2px solid #f3e5ab;
+
             border-bottom: 2px solid #f3e5ab;
+
             padding: 12px 0;
-            background: rgba(255,255,255,0.5);
+
         }
+
         /* Cuenta regresiva */
+
         .countdown {
+
             display: grid;
+
             grid-template-columns: repeat(4, 1fr);
+
             gap: 8px;
+
             margin-top: 15px;
+
         }
+
         .time-box {
-            background: rgba(255, 255, 255, 0.9);
+
+            background: #fff;
+
             padding: 10px;
+
             border-radius: 10px;
+
             box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+
             border: 1px solid #f9f0d9;
+
         }
+
         .time-box span {
+
             display: block;
+
         }
+
         .time-box .number {
+
             font-size: 1.5rem;
+
             font-weight: bold;
+
             color: #d4af37;
+
         }
+
         .time-box .label {
+
             font-size: 0.75rem;
+
             color: #777;
+
             text-transform: uppercase;
+
         }
+
         /* Botones de Mapas */
+
         .action-btn {
+
             display: inline-block;
+
             background: #333;
+
             color: #fff;
+
             padding: 10px 20px;
+
             border-radius: 5px;
+
             text-decoration: none;
+
             margin-top: 12px;
+
             font-size: 0.9rem;
+
             transition: background 0.3s;
+
         }
+
         .action-btn:hover {
+
             background: #d4af37;
+
         }
+
         /* Estilos del Formulario de Confirmación */
+
         .form-box {
-            background: rgba(255, 255, 255, 0.95);
+
+            background: #fff;
+
             padding: 25px 20px;
+
             border-radius: 20px;
+
             box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+
             margin: 15px 0;
+
             text-align: left;
+
             border: 1px solid #f9f0d9;
+
             position: relative;
+
         }
+
         .form-box::before {
+
             content: "✨ 🌹 ✨";
+
             position: absolute;
+
             top: -12px;
+
             left: 50%;
+
             transform: translateX(-50%);
+
             font-size: 0.85rem;
+
             background: #fcfbfa;
+
             padding: 0 10px;
+
         }
+
         .form-group {
+
             margin-bottom: 18px;
+
         }
+
         .form-group label {
+
             display: block;
+
             font-weight: 600;
+
             color: #444;
+
             margin-bottom: 6px;
+
             font-size: 0.95rem;
+
         }
+
         .form-control {
+
             width: 100%;
+
             padding: 12px 15px;
+
             border: 1px solid #d4af37;
+
             border-radius: 10px;
+
             font-size: 0.95rem;
+
             font-family: 'Montserrat', sans-serif;
+
             outline: none;
+
             color: #333;
+
             background-color: #fff;
+
         }
+
         .radio-group {
+
             display: flex;
+
             flex-direction: column;
+
             gap: 10px;
+
             margin-top: 8px;
+
         }
+
         .radio-option {
+
             display: flex;
+
             align-items: center;
+
             gap: 8px;
+
             font-size: 0.95rem;
+
             color: #555;
+
             cursor: pointer;
+
         }
+
         /* Botón específico de WhatsApp */
+
         .whatsapp-btn {
+
             display: block;
+
             width: 100%;
+
             background: #25d366;
+
             color: #fff;
+
             padding: 14px;
+
             border-radius: 30px;
+
             text-decoration: none;
+
             font-weight: 600;
+
             font-size: 1rem;
+
             text-align: center;
+
             margin-top: 20px;
+
             box-shadow: 0px 4px 12px rgba(37, 211, 102, 0.3);
+
             transition: background 0.3s;
+
             border: none;
+
             cursor: pointer;
+
         }
+
         .whatsapp-btn:hover {
+
             background: #1ebe5d;
+
         }
+
         /* Footer */
+
         footer {
-            background: rgba(249, 246, 240, 0.9);
+
+            background: #f9f6f0;
+
             padding: 30px 20px;
+
             color: #b8860b;
+
             position: relative;
+
         }
+
     </style>
+
 </head>
+
 <body>
 
+
+
     <div class="mobile-container">
+
         <!-- Adornos de coronas y brillos en las esquinas inferiores -->
+
         <div class="bottom-crowns">
+
             <span>👑 ✨</span>
+
             <span>✨ 👑</span>
+
         </div>
 
+
+
         <!-- SECCIÓN PORTADA Y MÚSICA -->
+
         <section>
+
             <h1>Madeleyne</h1>
+
             <div style="margin: 20px 0; position: relative;">
-                <img src="foto.jpeg" alt="Madeleyne" style="width: 100%; max-width: 300px; border-radius: 15px; box-shadow: 0 4px 15px rgba(212,175,55,0.3); border: 2px solid #f3e5ab;">
+
+                <img src="foto.jpeg" alt="Madeleyne" style="width: 100%; max-width: 300px; border-radius: 15px; box-shadow: 0 4px 15px rgba(212,175,55,0.25); border: 2px solid #f3e5ab;">
+
             </div>
+
             <p>Presiona para escuchar mi canción 🎵</p>
+
             <button class="music-btn" onclick="togglePlay()">🎵 Reproducir Música</button>
+
             
+
             <!-- Archivo de audio -->
+
             <audio id="background-music" loop>
+
                 <source src="musica.mp3" type="audio/mpeg">
+
                 Tu navegador no soporta audio.
+
             </audio>
+
         </section>
+
+
 
         <!-- MENSAJE INICIAL -->
+
         <section>
+
             <h2>Mis 15 Años</h2>
+
             <p class="quote">“Hoy comienza una etapa muy especial de mi vida y quiero celebrarla rodeada de las personas que más aprecio. Por eso, deseo compartir contigo la alegría de este día tan importante para mí. Tu presencia hará que esta tarde sea aún más mágica y que este hermoso recuerdo permanezca para siempre en mi corazón.
 
+
+
 Mis 15 años.” 💗 ✨🌹</p>
+
         </section>
+
+
 
         <!-- PADRES Y PADRINOS -->
+
         <section>
-            <div class="container-box">
-                <h2>Con el amor de mis Padres</h2>
-                <p><strong>Jhonny Javier Silva Cabezas</strong></p>
-                <p>&amp;</p>
-                <p><strong>Carmen Maribel Castillo Luna</strong></p>
-            </div>
 
             <div class="container-box">
-                <h2>&amp; Madrina</h2>
-                <p><strong>Johanna Natividad Pinto Rojas</strong></p>
+
+                <h2>Con el amor de mis Padres</h2>
+
+                <p><strong>Jhonny Javier Silva Cabezas</strong></p>
+
+                <p>&amp;</p>
+
+                <p><strong>Carmen Maribel Castillo Luna</strong></p>
+
             </div>
+
+
+
+            <div class="container-box">
+
+                <h2>&amp; Madrina</h2>
+
+                <p><strong>Johanna Natividad Pinto Rojas</strong></p>
+
+            </div>
+
         </section>
+
+
 
         <!-- MENSAJE SECUNDARIO -->
+
         <section>
+
+            <h2></h2>
+
             <p class="quote">“He aprendido que estar con quienes quiero es suficiente para ser feliz. Ten por seguro que el tiempo y estas letras se borrarán, pero el recuerdo de tu presencia esta tarde nunca lo olvidaré.” ✨🌹</p>
+
         </section>
+
+
 
         <!-- FECHA -->
+
         <section>
+
             <h2>Mis Quince</h2>
+
             <p>Octubre</p>
+
             <div class="date-box">
+
                 <span>Sábado</span>
+
                 <span>31</span>
+
                 <span>2026</span>
+
             </div>
+
         </section>
+
+
 
         <!-- RECEPCIÓN -->
+
         <section>
+
             <div class="container-box">
+
                 <h2>Recepción</h2>
+
                 <p>Sábado 31 de octubre<br>Hora: 03:00 p.m.</p>
+
                 <p>Salón de Eventos ARIUX EVENTOS</p>
+
                 <p>Cantón Montalvo, Los Ríos</p>
+
                 <a class="action-btn" href="https://www.google.com/maps/dir//6P89%2B72P+Sal%C3%B3n+de+eventos+Ariux,+Montalvo/@-1.784017,-79.2836317,17z/data=!4m16!1m7!3m6!1s0x91d329005af755a7:0xb07b6ee3ad7a66b4!2sSal%C3%B3n+de+eventos+Ariux!8m2!3d-1.7852824!4d-79.2822691!16s%2Fg%2F11zxkprtnk!4m7!1m0!1m5!1m1!1s0x91d329005af755a7:0xb07b6ee3ad7a66b4!2m2!1d-79.2822691!2d-1.7852824?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver mapa</a>
+
             </div>
+
         </section>
+
+
 
         <!-- CUENTA REGRESIVA -->
+
         <section>
+
             <h2>Solo faltan</h2>
+
             <div class="countdown">
+
                 <div class="time-box">
+
                     <span class="number" id="days">00</span>
+
                     <span class="label">Días</span>
+
                 </div>
+
                 <div class="time-box">
+
                     <span class="number" id="hours">00</span>
+
                     <span class="label">Horas</span>
+
                 </div>
+
                 <div class="time-box">
+
                     <span class="number" id="minutes">00</span>
+
                     <span class="label">Minutos</span>
+
                 </div>
+
                 <div class="time-box">
+
                     <span class="number" id="seconds">00</span>
+
                     <span class="label">Segundos</span>
+
                 </div>
+
             </div>
+
         </section>
+
+
 
         <!-- DRESS CODE Y REGALOS -->
+
         <section>
+
             <h2>Dress Code</h2>
+
             <p><strong>Semi - Formal</strong></p>
+
             <p class="quote"><em>Reservado el color rosado para la Quinceañera.</em> 👑</p>
+
             
+
             <br>
+
             <h2>Muestra de Cariño</h2>
+
             <p>El mejor regalo que me puedes dar es tu presencia, pero si deseas darme un obsequio puedes hacerlo en <strong>sobre cerrado</strong>. 💌</p>
+
         </section>
+
+
 
         <!-- CONFIRMAR ASISTENCIA WHATSAPP (CON MENÚ INTERACTIVO) -->
+
         <section>
+
             <h2>Confirmar Asistencia</h2>
+
             <p>Por favor confirma tu presencia con anticipación</p>
+
             
+
             <div class="form-box">
+
                 <div class="form-group">
+
                     <label>Nombre Completo</label>
+
                     <input type="text" id="guestName" class="form-control" placeholder="Tu Nombre y Apellido">
+
                 </div>
 
+
+
                 <div class="form-group">
+
                     <label>Cantidad de Pases</label>
+
                     <select id="guestPasses" class="form-control">
+
                         <option value="1 Pase">1 Pase</option>
+
                         <option value="2 Pases" selected>2 Pases</option>
+
                         <option value="3 Pases">3 Pases</option>
+
                         <option value="4 Pases">4 Pases</option>
+
                     </select>
+
                 </div>
 
+
+
                 <div class="form-group">
+
                     <label>¿Nos acompañarás?</label>
+
                     <div class="radio-group">
+
                         <label class="radio-option">
+
                             <input type="radio" name="attendance" value="Sí, asistiré" checked> Sí, asistiré 🌹
+
                         </label>
+
                         <label class="radio-option">
+
                             <input type="radio" name="attendance" value="Lo siento, no podré"> Lo siento, no podré
+
                         </label>
+
                     </div>
+
                 </div>
+
+
 
                 <button class="whatsapp-btn" onclick="sendWhatsApp()">
+
                     💬 Confirmar por WhatsApp
+
                 </button>
+
             </div>
+
         </section>
 
+
+
         <!-- FOOTER -->
+
         <footer>
+
             <h2>✨ ¡Te espero! ✨</h2>
+
             <p>Madeleyne • Mis 15 Años</p>
+
         </footer>
+
+
 
     </div>
 
+
+
     <!-- SCRIPT DE MÚSICA, CUENTA REGRESIVA Y FORMULARIO WHATSAPP -->
+
     <script>
+
         var music = document.getElementById("background-music");
+
         var isPlaying = false;
+
         function togglePlay() {
+
             if (isPlaying) {
+
                 music.pause();
+
                 isPlaying = false;
+
                 document.querySelector('.music-btn').innerText = "🎵 Reproducir Música";
+
             } else {
+
                 music.play();
+
                 isPlaying = true;
+
                 document.querySelector('.music-btn').innerText = "⏸️ Pausar Música";
+
             }
+
         }
+
+
 
         // Cuenta regresiva (Configurada para el 31 de Octubre de 2026)
+
         const countdownDate = new Date("Oct 31, 2026 15:00:00").getTime();
+
         setInterval(function() {
+
             const now = new Date().getTime();
+
             const distance = countdownDate - now;
 
+
+
             document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+
             document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
             document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
             document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+
         }, 1000);
 
+
+
         // Función que arma el mensaje detallado para WhatsApp
+
         function sendWhatsApp() {
+
             const name = document.getElementById("guestName").value.trim();
+
             const passes = document.getElementById("guestPasses").value;
+
             const attendance = document.querySelector('input[name="attendance"]:checked').value;
 
+
+
             if (name === "") {
+
                 alert("Por favor, ingresa tu Nombre y Apellido.");
+
                 document.getElementById("guestName").focus();
+
                 return;
+
             }
 
+
+
             const phoneNumber = "593980573678"; 
+
             
+
             const message = `👑 *CONFIRMACIÓN DE ASISTENCIA* 👑\n\n¡Hola! Mi nombre es *${name}*.\n\nConfirmo mi asistencia a los 15 años de Madeleyne:\n- Estado: *${attendance}*\n- Cantidad de Pases: *${passes}*`;
+
             
+
             const encodedMessage = encodeURIComponent(message);
+
             window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+
         }
+
     </script>
+
 </body>
+
 </html>
